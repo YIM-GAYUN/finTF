@@ -44,6 +44,7 @@ def init_driver(download_dir=os.getcwd()):
         "plugins.always_open_pdf_externally": True  # PDF 파일을 자동으로 다운로드하도록 설정
     }
     chrome_options.add_experimental_option("prefs", prefs)
+    chrome_options.add_argument("--headless")
     
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
